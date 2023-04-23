@@ -4,6 +4,9 @@ Modifies the Iron Teeth faction to use natural procreation instead of breeding p
 
 This was just a personal mod, I don't expect too many people will care for it, but I figured I might as well publish it in case anyone else out there wants this.
 
+## Installation
+Copy the NaturalProcreations folder into your BepInEx/plugins directory.
+
 ## What it does
 Technically it modifies all factions, but only the Iron Teeth will be affected. What it does is:
 

@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using HarmonyLib;
 using UnityEngine;
-using TimberApi.ConsoleSystem;
 using TimberApi.ModSystem;
+using TimberApi.ConsoleSystem;
 using Timberborn.DwellingSystem;
 using Timberborn.GameFactionSystem;
 using Timberborn.Reproduction;
+
 
 namespace NaturalProcreation
 {
@@ -14,10 +15,13 @@ namespace NaturalProcreation
     public class NaturalProcreationPlugin : IModEntrypoint
     {
         internal static IConsoleWriter? Log;
+        internal static ProcreationConfig? Config;
 
         public void Entry(IMod mod, IConsoleWriter consoleWriter)
         {
             Log = consoleWriter;
+
+            Config = mod.Configs.Get<ProcreationConfig>();
 
             // Harmony patches
             new Harmony("com.orinoco.plugin.natural_procreation").PatchAll();
